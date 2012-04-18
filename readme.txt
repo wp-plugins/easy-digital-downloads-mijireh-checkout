@@ -89,7 +89,6 @@ For more information about PCI compliance, read [What you need to know about PCI
 
 == Screenshots ==
 
-1. [Secure credit card processing with Mijireh](http://www.mijireh.com/)
 2. Payment Gateway Settings Page for Easy Digital Downloads with Mijireh Checkout plugin activated
 3. WordPress Pages view with the default Mijireh Secure Checkout page created
 4. Default Mijireh Secure Checkout page with the Page Slurp meta box
