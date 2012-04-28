@@ -4,7 +4,7 @@ Donate Link: http://www.mijireh.com
 Tags: easy digital downloads, digital downloads, download, e-downloads, edd, administration, mijireh, ecommerce, checkout, payment gateway, gateway, payment
 Requires at least: 3.3
 Tested up to: 3.3.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 This plugin integrates Easy Digital Downloads with the Mijireh Hosted Checkout service.
 
@@ -95,10 +95,16 @@ For more information about PCI compliance, read [What you need to know about PCI
 
 == Changelog ==
 
+= 1.0.1 (2012-04-28) = 
+Updated to support the new variable pricing system in EDD
+
 = 1.0 (2012-04-15) =
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.1 = 
+Updated to support the new variable pricing system in EDD
 
 = 1.0 =
 Initial Release.
