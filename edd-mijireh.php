@@ -3,7 +3,7 @@
 Plugin Name: Easy Digital Downloads - Mijireh Checkout
 Plugin URL: http://easydigitaldownloads.com/extension/mijireh-checkout
 Description: Adds an integration for mijireh.com
-Version: 1.0
+Version: 1.0.1
 Author: Benjamin Rojas
 Author URI: http://benjaminrojas.net
 Contributors: benjaminprojas
@@ -76,6 +76,7 @@ function emij_process_payment($purchase_data) {
 		'purchase_key' => $purchase_data['purchase_key'],
 		'currency' => $edd_options['currency'],
 		'downloads' => $purchase_data['downloads'],
+		'cart_details' => $purchase_data['cart_details'],
 		'user_info' => $purchase_data['user_info'],
 		'status' => 'pending'
 	);
@@ -87,17 +88,17 @@ function emij_process_payment($purchase_data) {
 	  $mijireh = new MijirehGateway();
 	  $listener_url = add_query_arg('order', 'mijireh', get_permalink($edd_options['success_page']));
 	  $mijireh->purchase_data(array(
-  	  'credentials' => array(
-  	    'mijireh_access_key' => $credentials['mijireh_access_key'],
-  	    'listener_url' => $listener_url
-  	  ),
-  	  'price' => $purchase_data['price'],
-  	  'currency_code' => $edd_options['currency'],
-  	  'cart_details' => $purchase_data['cart_details'],
-  	  'discount' => $purchase_data['user_info']['discount'],
-  	  'post_data' => $purchase_data['post_data'],
-  	  'payment_id' => $payment
-  	));
+		  'credentials' => array(
+			'mijireh_access_key' => $credentials['mijireh_access_key'],
+			'listener_url' => $listener_url
+		  ),
+		  'price' => $purchase_data['price'],
+		  'currency_code' => $edd_options['currency'],
+		  'cart_details' => $purchase_data['cart_details'],
+		  'discount' => $purchase_data['user_info']['discount'],
+		  'post_data' => $purchase_data['post_data'],
+		  'payment_id' => $payment
+		));
 		try {
 		  $redirect = $mijireh->get_redirect_url();
 		}
